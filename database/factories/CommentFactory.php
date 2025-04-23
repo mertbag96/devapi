@@ -23,6 +23,7 @@ class CommentFactory extends Factory
             'user_id' => User::factory(),
             'post_id' => Post::factory(),
             'comment' => $this->faker->sentences(rand(1, 5), true),
+            'rating' => $this->faker->numberBetween(1, 5),
             'created_at' => now(),
         ];
     }

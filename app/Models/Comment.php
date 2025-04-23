@@ -21,6 +21,7 @@ class Comment extends Model
     protected $fillable = [
         'user_id',
         'post_id',
+        'rating',
         'comment',
         'is_approved',
         'approved_at',
@@ -36,6 +37,7 @@ class Comment extends Model
         return [
             'user_id' => 'integer',
             'post_id' => 'integer',
+            'rating' => 'integer',
             'comment' => 'string',
             'is_approved' => 'boolean',
             'approved_at' => 'datetime',

@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(Post::class)->constrained()->cascadeOnDelete();
+            $table->integer('rating');
             $table->text('comment');
             $table->boolean('is_approved')->default(false);
             $table->timestamp('approved_at')->nullable();
